@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "data.h"
+#include <sys/stat.h>
 
 #define MAX_PATH_LENGTH 128
 
@@ -10,7 +11,7 @@ int save(gen_t *gen, char *path, int gen_number){
 	char file_name[MAX_PATH_LENGTH];
 	static unsigned char color[3];
 	sprintf(file_name, "%s/gen%i.ppm", path, gen_number);
-
+    mkdir(path);
 	if((genX = fopen(file_name, "wb")) == NULL)
         return -1;
 

@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-f dane.txt -p gen -n 10 -s 10" />
+				<Option parameters="-f dane2.txt -p gen2 -n 10 -s 10 -x 10 -y 10" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -53,7 +53,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="rules.h" />
-		<Unit filename="saveppm.c">
+		<Unit filename="savePpm.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

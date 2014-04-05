@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1396722779 source:c:\users\antah\desktop\codeblocks\life\loader.c
+1396725828 source:c:\users\antah\desktop\codeblocks\life\loader.c
 	<stdlib.h>
 	<stdio.h>
 	"data.h"
@@ -46,8 +46,9 @@
 	<unistd.h>
 	"data.h"
 
-1396724615 source:c:\users\antah\desktop\codeblocks\life\saveppm.c
+1396726041 source:c:\users\antah\desktop\codeblocks\life\saveppm.c
 	<stdio.h>
 	<stdlib.h>
 	"data.h"
+	<sys/stat.h>
 
