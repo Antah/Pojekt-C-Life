@@ -10,17 +10,16 @@ int save(gen_t *gen, int gen_number){
 	int i, j, x=0, y=0;
 	char file_name[MAX_PATH_LENGTH];
 	static unsigned char color[3];
+
 	sprintf(file_name, "%s/%s_gen", path, data);
-	//puts(file_name);
 	for(i=1; i<gen_amount;i*=10){
         if(gen_number<i*10)
             sprintf(file_name, "%s0", file_name);
-        puts(file_name);
 	}
 	sprintf(file_name, "%s%i.ppm",file_name, gen_number);
-	puts(file_name);
-	//sprintf(file_name, "%s/gen%i.ppm", path, gen_number);
+
     mkdir(path);
+
 	if((gen_x = fopen(file_name, "wb")) == NULL)
         return -1;
 
