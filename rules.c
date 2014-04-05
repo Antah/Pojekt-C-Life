@@ -12,4 +12,3 @@ int rules(int neighboursAlive, int cellState){
 	}
     return 0;
 }
-

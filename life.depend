@@ -4,15 +4,15 @@
 	<stdio.h>
 	"data.h"
 
-1396182280 c:\users\antah\desktop\codeblocks\life\data.h
+1396718590 c:\users\antah\desktop\codeblocks\life\data.h
 	<stdio.h>
 
-1396710835 source:c:\users\antah\desktop\codeblocks\life\main.c
+1396715127 source:c:\users\antah\desktop\codeblocks\life\main.c
 	<stdlib.h>
 	<stdio.h>
 	"data.h"
 
-1396712976 source:c:\users\antah\desktop\codeblocks\life\neighbours.c
+1396714255 source:c:\users\antah\desktop\codeblocks\life\neighbours.c
 	<stdlib.h>
 	"neighbours.h"
 
@@ -28,11 +28,11 @@
 1396431425 c:\users\antah\desktop\codeblocks\life\rules.h
 	<stdio.h>
 
-1396712835 source:c:\users\antah\desktop\codeblocks\life\rules.c
+1396714330 source:c:\users\antah\desktop\codeblocks\life\rules.c
 	<stdlib.h>
 	"rules.h"
 
-1396186170 source:c:\users\antah\desktop\codeblocks\life\saver.c
+1396718595 source:c:\users\antah\desktop\codeblocks\life\saver.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>

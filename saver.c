@@ -3,25 +3,48 @@
 #include <string.h>
 #include "data.h"
 
-void save(gen_t *gen, char *dir, int x){
-	FILE *genX;
-	int i, j, s;
-	char c[1];
-	char plik[20];
-	s = sprintf(plik, "%s/gen%i.txt", dir, x);
-	if(s < 0){
-	
-	}
-	puts(plik);
-	genX = fopen(plik, "a");
-        for(i=0; i<gen->w; i++){
-		for(j=0; j<gen->h; j++){
-			s = sprintf(c, "%i", gen->tabA[i][j]);
-			fputs(c, genX);
-			fputs(" ", genX);
+#define MAX_PATH_LENGTH 128
+#define CELL_SIZE 10
+
+int save(gen_t *gen, char *dir, int gen_number){
+	//FILE *genX;
+	int i, j, x=0, y=0;
+	char file_name[MAX_PATH_LENGTH];
+	static unsigned char color[3];
+	sprintf(file_name, "%s/gen%i.ppm", dir, gen_number);
+
+	puts(file_name);
+
+	FILE *genX = fopen(file_name, "wb"); //== NULL))
+       // return -1;
+    printf("utworzylem");
+    (void)fprintf( genX, "P6\n%i %i\n255\n", (CELL_SIZE+1)*(gen->w)+1, (CELL_SIZE+1)*(gen->h)+1 );
+    printf("rozmiary");
+
+    for(i=1; i<=11*(gen->h)+1; i++){
+        if(i%(CELL_SIZE+1) == 1)
+            x++;
+        for(j=1; j<=11*(gen->w)+1; j++){
+            if(j%(CELL_SIZE+1) == 1)
+                y++;
+            if(i%(CELL_SIZE+1) == 1 || j%(CELL_SIZE+1) == 1){
+                color[0] = 175;
+                color[1] = 175;
+                color[2] = 175;
+            } else if(gen->tabA[x][y] == 1){
+                color[0] = 0;
+                color[1] = 0;
+                color[2] = 0;
+            } else if(gen->tabA[x][y] == 0){
+                color[0] = 255;
+                color[1] = 255;
+                color[2] = 255;
+            }
+            fwrite(color, 1, 3, genX);
 		}
-		fputs("\n", genX);
+		y=0;
 	}
 	fclose(genX);
 	printf("save\n");
+	return 1;
 }

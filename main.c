@@ -11,13 +11,17 @@ int main(int argc, char **argv){
 
     	if(load(argv[1], &gen) < 0){
 		printf("Nie moge otworzyc pliku z danymi");
-		return 1;
+            return EXIT_FAILURE;
 	}
 
     	for(i = 0; i < atoi(argv[3]); i++){
           	newGen(&gen);
-          	if(i < atoi(argv[4]) || i == atoi(argv[3]) - 1)
-               		save(&gen, argv[2], i+1);
+          	if(i < atoi(argv[4]) || i == atoi(argv[3]) - 1){
+               		if((save(&gen, argv[2], i+1)) < 0){
+                        printf("Nie udalo sie utworzyc pliku");
+                        return EXIT_FAILURE;
+               		};
+          	}
     	}
     	printf("Program zakonczyl dzialanie powodzeniem.\n");
     	return 0;

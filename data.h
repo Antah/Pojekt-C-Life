@@ -13,7 +13,7 @@ int load(char *plik, gen_t *gen);
 void alok(gen_t *gen);
 
 //save.c
-void save(gen_t *gen, char *dir, int x);
+int save(gen_t *gen, char *dir, int gen_number);
 
 //newGen.c
 void newGen(gen_t *gen);
