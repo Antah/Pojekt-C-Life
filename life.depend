@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1396714097 source:c:\users\antah\desktop\codeblocks\life\loader.c
+	<stdlib.h>
+	<stdio.h>
+	"data.h"
+
+1396182280 c:\users\antah\desktop\codeblocks\life\data.h
+	<stdio.h>
+
+1396710835 source:c:\users\antah\desktop\codeblocks\life\main.c
+	<stdlib.h>
+	<stdio.h>
+	"data.h"
+
+1396712976 source:c:\users\antah\desktop\codeblocks\life\neighbours.c
+	<stdlib.h>
+	"neighbours.h"
+
+1396179873 c:\users\antah\desktop\codeblocks\life\neighbours.h
+	<stdio.h>
+
+1396711417 source:c:\users\antah\desktop\codeblocks\life\newgen.c
+	<stdlib.h>
+	"data.h"
+	"neighbours.h"
+	"rules.h"
+
+1396431425 c:\users\antah\desktop\codeblocks\life\rules.h
+	<stdio.h>
+
+1396712835 source:c:\users\antah\desktop\codeblocks\life\rules.c
+	<stdlib.h>
+	"rules.h"
+
+1396186170 source:c:\users\antah\desktop\codeblocks\life\saver.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"data.h"
+
