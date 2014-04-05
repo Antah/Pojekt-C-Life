@@ -3,7 +3,6 @@
 #include "data.h"
 
 #define MAX_PATH_LENGTH 128
-#define CELL_SIZE 15
 
 int save(gen_t *gen, char *path, int gen_number){
 	FILE *genX;
@@ -12,21 +11,18 @@ int save(gen_t *gen, char *path, int gen_number){
 	static unsigned char color[3];
 	sprintf(file_name, "%s/gen%i.ppm", path, gen_number);
 
-	puts(file_name);
-
 	if((genX = fopen(file_name, "wb")) == NULL)
         return -1;
-    printf("utworzylem");
-    (void)fprintf( genX, "P6\n%i %i\n255\n", (CELL_SIZE+1)*(gen->w)+1, (CELL_SIZE+1)*(gen->h)+1 );
-    printf("rozmiary");
 
-    for(i=1; i<=(CELL_SIZE+1)*(gen->h)+1; i++){
-        if(i%(CELL_SIZE+1) == 1)
+    fprintf( genX, "P6\n%i %i\n255\n", (cellX+1)*(gen->w)+1, (cellY+1)*(gen->h)+1 );
+
+    for(i=1; i<=(cellY+1)*(gen->h)+1; i++){
+        if(i%(cellY+1) == 1)
             x++;
-        for(j=1; j<=(CELL_SIZE+1)*(gen->w)+1; j++){
-            if(j%(CELL_SIZE+1) == 1)
+        for(j=1; j<=(cellX+1)*(gen->w)+1; j++){
+            if(j%(cellX+1) == 1)
                 y++;
-            if(i%(CELL_SIZE+1) == 1 || j%(CELL_SIZE+1) == 1){
+            if(i%(cellY+1) == 1 || j%(cellX+1) == 1){
                 color[0] = 175;
                 color[1] = 175;
                 color[2] = 175;
@@ -44,6 +40,5 @@ int save(gen_t *gen, char *path, int gen_number){
 		y=0;
 	}
 	fclose(genX);
-	printf("save\n");
 	return 1;
 }

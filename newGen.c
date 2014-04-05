@@ -19,9 +19,9 @@ void newGen(gen_t *gen){
 
             neighboursAlive = neighbours(neighboursTab);
             gen->tabB[i][j] = rules(neighboursAlive, gen->tabA[i][j]);
-			printf("%i ", gen->tabB[i][j]);
+			//printf("%i ", gen->tabB[i][j]);//pomocniczy wydruk
         }
-        printf("\n");
+        //printf("\n");//pomocniczy wydruk
     }
 	for(i=1; i<1+gen->h;i++){
 		for(j=1; j<1+gen->w; j++){

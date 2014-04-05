@@ -7,7 +7,7 @@ typedef struct{
         int w, h;
 }gen_t;
 
-int genAmount, genToSave;
+int genAmount, genToSave, cellX, cellY;
 char *path, *data;
 
 //load.c

@@ -7,7 +7,7 @@ int main(int argc, char **argv){
     int opt, i;
     gen_t gen;
 
-    while((opt = getopt(argc, argv, "f:p:n:s:")) != -1){
+    while((opt = getopt(argc, argv, "f:p:n:s:x:y:")) != -1){
         switch(opt){
             case 'f':
                 data = optarg;
@@ -20,6 +20,12 @@ int main(int argc, char **argv){
                 break;
             case 's':
                 genToSave = atoi(optarg);
+                break;
+            case 'x':
+                cellX = atoi(optarg);
+                break;
+            case 'y':
+                cellY = atoi(optarg);
                 break;
         }
     }
@@ -39,6 +45,10 @@ int main(int argc, char **argv){
         printf("Nie podano ilosci generacji do zapisania");
         return EXIT_FAILURE;
     }
+    if(cellX == NULL)
+        cellX = 15;
+    if(cellY == NULL)
+        cellY = 15;
 
     if(load(data, &gen) < 0){
         printf("Nie moge otworzyc pliku z danymi");
