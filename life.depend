@@ -4,10 +4,10 @@
 	<stdio.h>
 	"data.h"
 
-1396725393 c:\users\antah\desktop\codeblocks\life\data.h
+1396729534 c:\users\antah\desktop\codeblocks\life\data.h
 	<stdio.h>
 
-1396725380 source:c:\users\antah\desktop\codeblocks\life\main.c
+1396730080 source:c:\users\antah\desktop\codeblocks\life\main.c
 	<stdio.h>
 	<stdlib.h>
 	"data.h"
@@ -40,15 +40,15 @@
 	<stdlib.h>
 	"data.h"
 
-1396725380 source:c:\users\antah\desktop\codeblocks\life\flags.c
+1396729476 source:c:\users\antah\desktop\codeblocks\life\flags.c
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
 	"data.h"
 
-1396726041 source:c:\users\antah\desktop\codeblocks\life\saveppm.c
+1396730134 source:c:\users\antah\desktop\codeblocks\life\saveppm.c
 	<stdio.h>
 	<stdlib.h>
-	"data.h"
 	<sys/stat.h>
+	"data.h"
 

@@ -1,29 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "data.h"
 #include <sys/stat.h>
+#include "data.h"
 
 #define MAX_PATH_LENGTH 128
 
-int save(gen_t *gen, char *path, int gen_number){
-	FILE *genX;
+int save(gen_t *gen, int gen_number){
+	FILE *gen_x;
 	int i, j, x=0, y=0;
 	char file_name[MAX_PATH_LENGTH];
 	static unsigned char color[3];
-	sprintf(file_name, "%s/gen%i.ppm", path, gen_number);
+	sprintf(file_name, "%s/%s_gen", path, data);
+	//puts(file_name);
+	for(i=1; i<gen_amount;i*=10){
+        if(gen_number<i*10)
+            sprintf(file_name, "%s0", file_name);
+        puts(file_name);
+	}
+	sprintf(file_name, "%s%i.ppm",file_name, gen_number);
+	puts(file_name);
+	//sprintf(file_name, "%s/gen%i.ppm", path, gen_number);
     mkdir(path);
-	if((genX = fopen(file_name, "wb")) == NULL)
+	if((gen_x = fopen(file_name, "wb")) == NULL)
         return -1;
 
-    fprintf( genX, "P6\n%i %i\n255\n", (cellX+1)*(gen->w)+1, (cellY+1)*(gen->h)+1 );
+    fprintf( gen_x, "P6\n%i %i\n255\n", (cell_x+1)*(gen->w)+1, (cell_y+1)*(gen->h)+1 );
 
-    for(i=1; i<=(cellY+1)*(gen->h)+1; i++){
-        if(i%(cellY+1) == 1)
+    for(i=1; i<=(cell_y+1)*(gen->h)+1; i++){
+        if(i%(cell_y+1) == 1)
             x++;
-        for(j=1; j<=(cellX+1)*(gen->w)+1; j++){
-            if(j%(cellX+1) == 1)
+        for(j=1; j<=(cell_x+1)*(gen->w)+1; j++){
+            if(j%(cell_x+1) == 1)
                 y++;
-            if(i%(cellY+1) == 1 || j%(cellX+1) == 1){
+            if(i%(cell_y+1) == 1 || j%(cell_x+1) == 1){
                 color[0] = 175;
                 color[1] = 175;
                 color[2] = 175;
@@ -36,10 +45,10 @@ int save(gen_t *gen, char *path, int gen_number){
                 color[1] = 255;
                 color[2] = 255;
             }
-            fwrite(color, 1, 3, genX);
+            fwrite(color, 1, 3, gen_x);
 		}
 		y=0;
 	}
-	fclose(genX);
+	fclose(gen_x);
 	return 1;
 }

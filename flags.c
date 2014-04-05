@@ -14,16 +14,16 @@ int flags(int argc, char **argv){
                 path = optarg;
                 break;
             case 'n':
-                genAmount = atoi(optarg);
+                gen_amount = atoi(optarg);
                 break;
             case 's':
-                genToSave = atoi(optarg);
+                gen_to_save = atoi(optarg);
                 break;
             case 'x':
-                cellX = atoi(optarg);
+                cell_x = atoi(optarg);
                 break;
             case 'y':
-                cellY = atoi(optarg);
+                cell_y = atoi(optarg);
                 break;
         }
     }
@@ -35,17 +35,17 @@ int flags(int argc, char **argv){
         printf("Nie podano sciezki docelowej");
         return -1;
     }
-    if(genAmount == NULL){
+    if(gen_amount == NULL){
         printf("Nie podano ilosci generacji do wygenerowania");
         return -1;
     }
-    if(genToSave == NULL){
+    if(gen_to_save == NULL){
         printf("Nie podano ilosci generacji do zapisania");
         return -1;
     }
-    if(cellX == NULL)
-        cellX = 15;
-    if(cellY == NULL)
-        cellY = 15;
+    if(cell_x == NULL)
+        cell_x = 15;
+    if(cell_y == NULL)
+        cell_y = 15;
     return 1;
 }
