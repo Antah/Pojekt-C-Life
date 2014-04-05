@@ -1,54 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include "data.h"
 
 int main(int argc, char **argv){
-    int opt, i;
+    int i;
     gen_t gen;
 
-    while((opt = getopt(argc, argv, "f:p:n:s:x:y:")) != -1){
-        switch(opt){
-            case 'f':
-                data = optarg;
-                break;
-            case 'p':
-                path = optarg;
-                break;
-            case 'n':
-                genAmount = atoi(optarg);
-                break;
-            case 's':
-                genToSave = atoi(optarg);
-                break;
-            case 'x':
-                cellX = atoi(optarg);
-                break;
-            case 'y':
-                cellY = atoi(optarg);
-                break;
-        }
-    }
-    if(data == NULL){
-        printf("Nie podano nazwy pliku z danymi");
+    if(flags(argc, argv) < 0)
         return EXIT_FAILURE;
-    }
-    if(path == NULL){
-        printf("Nie podano sciezki docelowej");
-        return EXIT_FAILURE;
-    }
-    if(genAmount == NULL){
-        printf("Nie podano ilosci generacji do wygenerowania");
-        return EXIT_FAILURE;
-    }
-    if(genToSave == NULL){
-        printf("Nie podano ilosci generacji do zapisania");
-        return EXIT_FAILURE;
-    }
-    if(cellX == NULL)
-        cellX = 15;
-    if(cellY == NULL)
-        cellY = 15;
 
     if(load(data, &gen) < 0){
         printf("Nie moge otworzyc pliku z danymi");

@@ -4,13 +4,12 @@
 	<stdio.h>
 	"data.h"
 
-1396724759 c:\users\antah\desktop\codeblocks\life\data.h
+1396725393 c:\users\antah\desktop\codeblocks\life\data.h
 	<stdio.h>
 
-1396724856 source:c:\users\antah\desktop\codeblocks\life\main.c
+1396725380 source:c:\users\antah\desktop\codeblocks\life\main.c
 	<stdio.h>
 	<stdlib.h>
-	<unistd.h>
 	"data.h"
 
 1396720740 source:c:\users\antah\desktop\codeblocks\life\neighbours.c
@@ -37,6 +36,17 @@
 	"rules.h"
 
 1396724615 source:c:\users\antah\desktop\codeblocks\life\saver.c
+	<stdio.h>
+	<stdlib.h>
+	"data.h"
+
+1396725380 source:c:\users\antah\desktop\codeblocks\life\flags.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	"data.h"
+
+1396724615 source:c:\users\antah\desktop\codeblocks\life\saveppm.c
 	<stdio.h>
 	<stdlib.h>
 	"data.h"

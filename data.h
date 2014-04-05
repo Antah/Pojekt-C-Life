@@ -21,5 +21,8 @@ int save(gen_t *gen, char *dir, int gen_number);
 //newGen.c
 void newGen(gen_t *gen);
 
+//flags.c
+int flags(int argc, char **argv);
+
 #endif
 
