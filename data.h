@@ -7,6 +7,9 @@ typedef struct{
         int w, h;
 }gen_t;
 
+int genAmount, genToSave;
+char *path, *data;
+
 //load.c
 int load(char *plik, gen_t *gen);
 

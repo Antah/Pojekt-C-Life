@@ -1,25 +1,28 @@
 # depslib dependency file v1.0
-1396714097 source:c:\users\antah\desktop\codeblocks\life\loader.c
+1396722779 source:c:\users\antah\desktop\codeblocks\life\loader.c
 	<stdlib.h>
 	<stdio.h>
 	"data.h"
 
-1396718590 c:\users\antah\desktop\codeblocks\life\data.h
+1396722265 c:\users\antah\desktop\codeblocks\life\data.h
 	<stdio.h>
 
-1396715127 source:c:\users\antah\desktop\codeblocks\life\main.c
-	<stdlib.h>
+1396723451 source:c:\users\antah\desktop\codeblocks\life\main.c
 	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
 	"data.h"
 
-1396714255 source:c:\users\antah\desktop\codeblocks\life\neighbours.c
+1396720740 source:c:\users\antah\desktop\codeblocks\life\neighbours.c
+	<stdio.h>
 	<stdlib.h>
 	"neighbours.h"
 
 1396179873 c:\users\antah\desktop\codeblocks\life\neighbours.h
 	<stdio.h>
 
-1396711417 source:c:\users\antah\desktop\codeblocks\life\newgen.c
+1396720740 source:c:\users\antah\desktop\codeblocks\life\newgen.c
+	<stdio.h>
 	<stdlib.h>
 	"data.h"
 	"neighbours.h"
@@ -28,13 +31,13 @@
 1396431425 c:\users\antah\desktop\codeblocks\life\rules.h
 	<stdio.h>
 
-1396714330 source:c:\users\antah\desktop\codeblocks\life\rules.c
+1396720740 source:c:\users\antah\desktop\codeblocks\life\rules.c
+	<stdio.h>
 	<stdlib.h>
 	"rules.h"
 
-1396718595 source:c:\users\antah\desktop\codeblocks\life\saver.c
-	<stdlib.h>
+1396722265 source:c:\users\antah\desktop\codeblocks\life\saver.c
 	<stdio.h>
-	<string.h>
+	<stdlib.h>
 	"data.h"
 

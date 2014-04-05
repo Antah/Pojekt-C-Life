@@ -1,30 +1,29 @@
-#include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 #include "data.h"
 
 #define MAX_PATH_LENGTH 128
-#define CELL_SIZE 10
+#define CELL_SIZE 15
 
-int save(gen_t *gen, char *dir, int gen_number){
-	//FILE *genX;
+int save(gen_t *gen, char *path, int gen_number){
+	FILE *genX;
 	int i, j, x=0, y=0;
 	char file_name[MAX_PATH_LENGTH];
 	static unsigned char color[3];
-	sprintf(file_name, "%s/gen%i.ppm", dir, gen_number);
+	sprintf(file_name, "%s/gen%i.ppm", path, gen_number);
 
 	puts(file_name);
 
-	FILE *genX = fopen(file_name, "wb"); //== NULL))
-       // return -1;
+	if((genX = fopen(file_name, "wb")) == NULL)
+        return -1;
     printf("utworzylem");
     (void)fprintf( genX, "P6\n%i %i\n255\n", (CELL_SIZE+1)*(gen->w)+1, (CELL_SIZE+1)*(gen->h)+1 );
     printf("rozmiary");
 
-    for(i=1; i<=11*(gen->h)+1; i++){
+    for(i=1; i<=(CELL_SIZE+1)*(gen->h)+1; i++){
         if(i%(CELL_SIZE+1) == 1)
             x++;
-        for(j=1; j<=11*(gen->w)+1; j++){
+        for(j=1; j<=(CELL_SIZE+1)*(gen->w)+1; j++){
             if(j%(CELL_SIZE+1) == 1)
                 y++;
             if(i%(CELL_SIZE+1) == 1 || j%(CELL_SIZE+1) == 1){
