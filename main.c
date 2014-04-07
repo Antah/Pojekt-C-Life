@@ -6,11 +6,13 @@ int main(int argc, char **argv){
     int i;
     gen_t gen;
 
-    if(flags(argc, argv) < 0)
+    if(flags(argc, argv) < 0){
+        flagsHelp();
         return EXIT_FAILURE;
+    }
     if(load(data, &gen) < 0){
         printf("Nie moge otworzyc pliku z danymi");
-            return EXIT_FAILURE;
+        return EXIT_FAILURE;
 	}
     if((save(&gen, 0)) < 0){
                 printf("Nie udalo sie utworzyc pliku");

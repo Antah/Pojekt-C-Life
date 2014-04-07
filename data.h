@@ -24,6 +24,7 @@ void newGen(gen_t *gen);
 
 //flags.c
 int flags(int argc, char **argv);
+void flagsHelp();
 
 #endif
 

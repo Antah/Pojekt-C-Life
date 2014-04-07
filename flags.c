@@ -49,3 +49,22 @@ int flags(int argc, char **argv){
         cell_y = 15;
     return 1;
 }
+
+void flagsHelp(){
+    printf("\n\tObsluga Gry w zycie");
+    printf("\nAby program mogl dzialac i wyliczac generacje potrzebny jest plik tekstowy z danymi.");
+    printf("\nPrzykladowy format pliku z danymi:");
+    printf("\n4 4");
+    printf("\n0 0 0 0");
+    printf("\n0 1 1 0");
+    printf("\n0 1 1 0");
+    printf("\n0 0 0 0");
+    printf("\nOprocz tego przy uruchomieniu programu wymagane sa nastepujace flagi:");
+    printf("\n\t-f nazwa\t-\tnazwa pliku txt z danymi o formacie podanym powyzej.");
+    printf("\n\t-p sciezka\t-\tsciezka do miejsca, w ktorym program ma zapisywac wyliczone generacje.");
+    printf("\n\t-n liczba\t-\tliczba egenracji do wyliczenia.");
+    printf("\n\t-s liczba\t-\tliczba generacji do zapisania(nie liczac zerowej i ostatniej, ktore program zawsze zapisuje).");
+    printf("\nOpcjonalne flagi to:");
+    printf("\n\t-x liczba\t-\tszerokosc pojedynczej komorki w pikselach(domyslnie 15).");
+    printf("\n\t-y liczba\t-\twysokosc pojedynczej komorki w pikselach(domyslnie 15).");
+}

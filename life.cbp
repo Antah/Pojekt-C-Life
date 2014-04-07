@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-f dane3.txt -p gen3 -n 100 -s 100 -x 15 -y 15" />
+				<Option parameters="-f dane.txt -p gen -n 10" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
