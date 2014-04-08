@@ -28,19 +28,19 @@ int flags(int argc, char **argv){
         }
     }
     if(data == NULL){
-        printf("Nie podano nazwy pliku z danymi");
+        printf("Nie podano nazwy pliku z danymi.\n");
         return -1;
     }
     if(path == NULL){
-        printf("Nie podano sciezki docelowej");
+        printf("Nie podano sciezki docelowej.\n");
         return -1;
     }
     if(gen_amount == NULL){
-        printf("Nie podano ilosci generacji do wygenerowania");
+        printf("Nie podano ilosci generacji do wygenerowania.\n");
         return -1;
     }
     if(gen_to_save == NULL){
-        printf("Nie podano ilosci generacji do zapisania");
+        printf("Nie podano ilosci generacji do zapisania.\n");
         return -1;
     }
     if(cell_x == NULL)
@@ -66,5 +66,5 @@ void flagsHelp(){
     printf("\n\t-s liczba\t-\tliczba generacji do zapisania(nie liczac zerowej i ostatniej, ktore program zawsze zapisuje).");
     printf("\nOpcjonalne flagi to:");
     printf("\n\t-x liczba\t-\tszerokosc pojedynczej komorki w pikselach(domyslnie 15).");
-    printf("\n\t-y liczba\t-\twysokosc pojedynczej komorki w pikselach(domyslnie 15).");
+    printf("\n\t-y liczba\t-\twysokosc pojedynczej komorki w pikselach(domyslnie 15).\n");
 }

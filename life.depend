@@ -52,3 +52,9 @@
 	<sys/stat.h>
 	"data.h"
 
+1396976643 source:c:\users\antah\desktop\codeblocks\life\saveppmwindows.c
+	<stdio.h>
+	<stdlib.h>
+	<sys/stat.h>
+	"data.h"
+
