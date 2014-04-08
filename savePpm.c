@@ -18,7 +18,7 @@ int save(gen_t *gen, int gen_number){
 	}
 	sprintf(file_name, "%s%i.ppm",file_name, gen_number);
 
-    mkdir(path, S_IRWXG);
+    mkdir(path, 0777);
 
 	if((gen_x = fopen(file_name, "wb")) == NULL)
         return -1;
