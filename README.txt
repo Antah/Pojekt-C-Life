@@ -6,7 +6,7 @@ Przykladowe polecenie uruchomienia programu:
 	./life -f dane.txt -p gen -n 10 -s 10 -x 20 -y 20
   
 Aby program mogl dzialac i wyliczac generacje potrzebny jest plik tekstowy z danymi.
-Przyk?adowy format pliku z danymi:
+Przykladowy format pliku z danymi:
 	4 4
 	0 0 0 0
 	0 1 1 0
@@ -14,8 +14,8 @@ Przyk?adowy format pliku z danymi:
 	0 0 0 0
   
 Oprocz tego przy uruchomieniu programu wymagane sa nastepujace flagi:
-	-f nazwa	- nazwa pliku txt z danymi o formacie podanym powy?ej.
-	-p sciezka	- sciezka do miejsca, w ktorym program ma zapisywa? wyliczone generacje.
+	-f nazwa	- nazwa pliku txt z danymi o formacie podanym powyzej.
+	-p sciezka	- sciezka do miejsca, w ktorym program ma zapisywac wyliczone generacje.
 	-n liczba	- liczba generacji do wyliczenia.
 	-s liczba	- liczba generacji do zapisania(nie liczac zerowej i ostatniej, ktore program zawsze zapisuje).
     
