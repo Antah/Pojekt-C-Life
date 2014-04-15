@@ -34,4 +34,4 @@ savePpm.o: savePpm.c
 
 
 clean:
-	rm -rf *o hello
+	rm -rf *o

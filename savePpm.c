@@ -8,23 +8,23 @@
 int save(gen_t *gen, int gen_number){
 	FILE *gen_x;
 	int i, j, x=0, y=0;
-	char file_name[MAX_PATH_LENGTH];
+	char *file_name;
 	static unsigned char color[3];
-
-	sprintf(file_name, "%s/%s_gen", path, data);
-	for(i=1; i<gen_amount;i*=10){
-        if(gen_number<i*10)
-            sprintf(file_name, "%s0", file_name);
+	if((file_name = (char*) malloc (MAX_PATH_LENGTH)) == NULL)
+		return -1;
+	if((sprintf(file_name, "%s/%s_gen", path, data)) < 0)
+		return -1;
+	for(i=10; i<=gen_amount;i*=10){
+        if(gen_number<i)
+            if((sprintf(file_name, "%s0", file_name)) < 0)
+		return -1;
 	}
-	sprintf(file_name, "%s%i.ppm",file_name, gen_number);
-
+	if((sprintf(file_name, "%s%i.ppm",file_name, gen_number)) < 0)
+		return -1;
     mkdir(path, 0777);
-
 	if((gen_x = fopen(file_name, "wb")) == NULL)
         return -1;
-
     fprintf( gen_x, "P6\n%i %i\n255\n", (cell_x+1)*(gen->w)+1, (cell_y+1)*(gen->h)+1 );
-
     for(i=1; i<=(cell_y+1)*(gen->h)+1; i++){
         if(i%(cell_y+1) == 1)
             x++;
